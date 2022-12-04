@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Calculatiing Factoria</title>
+    </head>
+    <body>
+                <script>
+                // Make a program that adds the digits a given number N together.
+
+                // take input from the user
+                const number = parseInt(prompt('Enter a positive integer: '));
+
+                // checking if number is negative
+                if (number < 0) {
+                    document.write('Unspecified');
+                }
+
+                // if number is 0
+                else if (number === 0) {
+                    document.write(`Input: ${number} \n Answer: 1.`);
+                }
+
+                // if number is positive
+                else {
+                    let fact = 1;
+                    let fact1 = 1;
+                    let stringmain=`N=${number}: `
+                    let stringsum1=` `
+                    let stringsum=` `
+                    for (i = 1; i <= number; i++) {
+                        
+                        
+                        if(i%2==1){
+                            fact += i;
+                            if(number==i){
+                                stringsum=stringsum+i.toString();
+                            }else{
+                                stringsum=stringsum+i.toString()+" + ";
+                            }
+
+                        }else{
+                            fact1 += i;
+                            if(number==i){
+                                stringsum1=stringsum1+i.toString();
+                            }else{
+                                stringsum1=stringsum1+i.toString()+" + ";
+                            }
+
+                        }
+                        
+                           
+                    }
+                    
+                    document.write(`Input: ${number}.<br>`);
+                    
+                    document.write(`Answer: Sum of Odd = ${fact}, Sum of Even = ${fact1} <br>`);
+                    document.write(stringmain+` ${stringsum} = ${fact} and ${stringsum1} = ${fact1}`);
+                   
+                }
+                </script>
+    </body>
+</html>
